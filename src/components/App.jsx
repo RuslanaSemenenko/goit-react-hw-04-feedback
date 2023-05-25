@@ -19,11 +19,10 @@ export default function App() {
     return Math.round(percentage);
   };
 
-  const onLeaveFeedback = e => {
-    const name = e.target.name;
+  const onLeaveFeedback = option => {
     setFeedback(prevState => ({
       ...prevState,
-      [name]: prevState[name] + 1,
+      [option]: prevState[option] + 1,
     }));
   };
 
